@@ -170,7 +170,7 @@ function saveProfile(event) {
             const fullName = profileName.value.split(' ');
             const email = profileEmail.value;
             const phone = profilePhone.value;
-            const profilePhoto = document.getElementById("profilePhotoPreview").src;
+            // const profilePhoto = document.getElementById("profilePhotoPreview").src;
 
             const firstName = fullName[0];
             const lastName = fullName[1];
@@ -185,7 +185,7 @@ function saveProfile(event) {
                 last_name: lastName,
                 email: email,
                 phone: phone,
-                profile_photo: profilePhoto
+                // profile_photo: profilePhoto
             };
 
             // Merge updated personal information with existing profile data
@@ -262,8 +262,8 @@ function loadProfileForEdit() {
         // Populate form fields with profile data
         profileName.value = userObject.userName;
         profileEmail.value = userObject.email;
-        profilePhone.value = user.personal_information.phone;
-        profilePhotoPreview.src = user.personal_information.profile_photo;
+        // profilePhone.value = user.personal_information.phone;
+        // profilePhotoPreview.src = user.personal_information.profile_photo;
 
     } catch (error) {
         console.error('Error loading profile data for edit:', error);
@@ -293,8 +293,8 @@ function loadSavedProfileData() {
 
         profileEmail.value = userObject.email;
         profilePhone.value = user.personal_information.phone;
-        var profilePhotoPreview = document.getElementById('profilePhotoPreview');
-        profilePhotoPreview.src = user.personal_information.profile_photo;
+        // var profilePhotoPreview = document.getElementById('profilePhotoPreview');
+        // profilePhotoPreview.src = user.personal_information.profile_photo;
 
     } catch (error) {
         console.error('Error loading profile data for edit:', error);
